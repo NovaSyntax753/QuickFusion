@@ -97,7 +97,7 @@ export default function Hero({
               {ctaText && ctaLink && (
                 <Link
                   href={ctaLink}
-                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 hover:scale-105"
+                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 >
                   <span className="relative z-10">{ctaText}</span>
                   <svg
@@ -105,6 +105,7 @@ export default function Hero({
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -119,7 +120,7 @@ export default function Hero({
               {secondaryCtaText && secondaryCtaLink && (
                 <Link
                   href={secondaryCtaLink}
-                  className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 hover:scale-105"
+                  className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
                 >
                   <span>{secondaryCtaText}</span>
                   <svg
@@ -127,6 +128,7 @@ export default function Hero({
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"

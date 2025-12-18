@@ -8,6 +8,26 @@ export const metadata: Metadata = {
   title: "Home",
   description:
     "QuickFusion Innovations - Where creativity meets technology. Fusing strategic marketing with powerful tech solutions to help brands lead with confidence in the digital world.",
+  openGraph: {
+    title: "QuickFusion Innovations - Where Creativity Meets Technology",
+    description:
+      "We create growth engines that empower businesses to think bigger, move faster, and scale smarter.",
+    url: "https://quickfusioninnovations.com",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QuickFusion Innovations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "QuickFusion Innovations - Where Creativity Meets Technology",
+    description:
+      "We create growth engines that empower businesses to think bigger, move faster, and scale smarter.",
+  },
 };
 
 export default function Home() {

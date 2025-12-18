@@ -6,7 +6,27 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about QuickFusion Innovations - a leading software and technology solutions company dedicated to delivering innovative digital transformation services.",
+    "Learn about QuickFusion Innovations - Founded in 2024 by Purab Patel, we believe innovation happens when creativity meets technology. Based in Nagpur, serving clients worldwide.",
+  openGraph: {
+    title: "About QuickFusion Innovations - Our Story",
+    description:
+      "Founded in 2024 by Purab Patel. We believe innovation happens when creativity meets technology.",
+    url: "https://quickfusioninnovations.com/about",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "About QuickFusion Innovations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About QuickFusion Innovations",
+    description:
+      "Founded in 2024 by Purab Patel. We believe innovation happens when creativity meets technology.",
+  },
 };
 
 export default function About() {

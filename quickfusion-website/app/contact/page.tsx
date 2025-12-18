@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import { useState } from "react";
 
@@ -71,24 +70,28 @@ export default function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                   <div>
                     <label
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Full Name *
+                      Full Name <span className="text-red-500" aria-hidden="true">*</span>
+                      <span className="sr-only">(required)</span>
                     </label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
+                      autoComplete="name"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors"
                       placeholder="Your name"
+                      aria-required="true"
                     />
                   </div>
                   <div>
@@ -96,18 +99,22 @@ export default function Contact() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email Address *
+                      Email Address <span className="text-red-500" aria-hidden="true">*</span>
+                      <span className="sr-only">(required)</span>
                     </label>
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
+                      autoComplete="email"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors"
                       placeholder="your@email.com"
+                      aria-required="true"
                     />
                   </div>
                   <div>
@@ -120,6 +127,8 @@ export default function Contact() {
                     <input
                       type="text"
                       id="company"
+                      name="company"
+                      autoComplete="organization"
                       value={formData.company}
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
@@ -133,10 +142,12 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Message *
+                      Message <span className="text-red-500" aria-hidden="true">*</span>
+                      <span className="sr-only">(required)</span>
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       required
                       rows={5}
                       value={formData.message}
@@ -145,12 +156,14 @@ export default function Contact() {
                       }
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors resize-none"
                       placeholder="Tell us about your project..."
+                      aria-required="true"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-green-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-green-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+                    aria-busy={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>

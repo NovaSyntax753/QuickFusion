@@ -6,7 +6,27 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore QuickFusion Innovations services: Web Development, App Development, AI Solutions, and Digital Transformation. We build custom solutions for modern businesses.",
+    "Explore QuickFusion Innovations services: Video Content Creation, Web Development, App Development, AI Solutions, and Digital Transformation. We build custom solutions for modern businesses.",
+  openGraph: {
+    title: "Our Services - QuickFusion Innovations",
+    description:
+      "Video Content Creation, Web Development, App Development, AI Solutions, and Digital Transformation services.",
+    url: "https://quickfusioninnovations.com/services",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QuickFusion Innovations Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services - QuickFusion Innovations",
+    description:
+      "Video Content Creation, Web Development, App Development, AI Solutions, and Digital Transformation.",
+  },
 };
 
 export default function Services() {
