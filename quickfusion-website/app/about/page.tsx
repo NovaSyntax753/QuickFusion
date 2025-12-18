@@ -43,11 +43,16 @@ export default function About() {
                 Together
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed text-lg">
-                QuickFusion Innovations was founded with a clear mission: to
-                bridge the gap between cutting-edge technology and practical
-                business solutions. We recognized that many businesses struggle
-                to leverage modern technology effectively, and we set out to
-                change that.
+                QuickFusion Innovations was founded in 2024 by Purab Patel with
+                a clear mission: to bridge the gap between cutting-edge
+                technology and practical business solutions. We believe that
+                innovation happens when creativity meets technology.
+              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                In today's digital era, businesses can't rely on just one side
+                of the equation. Technology alone can't create impact. Marketing
+                alone can't build a future. But when both come together, that's
+                where transformation begins.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Today, we are a trusted partner for businesses seeking to
@@ -56,10 +61,15 @@ export default function About() {
                 developers, designers, and strategists work collaboratively to
                 deliver solutions that exceed expectations.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 mb-4 leading-relaxed">
                 From startups to established enterprises, we provide the
                 expertise and support needed to navigate the complexities of
                 digital transformation and achieve sustainable growth.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Based in Nagpur, Maharashtra, we serve clients across India and
+                beyond, helping brands not just survive, but lead with
+                confidence in the digital world.
               </p>
             </div>
 
@@ -79,8 +89,8 @@ export default function About() {
                       color: "from-blue-500 to-cyan-500",
                     },
                     {
-                      number: "5+",
-                      label: "Years in Business",
+                      number: "1+",
+                      label: "Year in Business",
                       color: "from-purple-500 to-pink-500",
                     },
                     {
