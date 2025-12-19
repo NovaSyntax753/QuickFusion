@@ -588,16 +588,7 @@ export default function Home() {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
-                    style={{
-                      transition: 'all 0.3s ease',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = `0 20px 40px -15px ${stat.color.includes('green') ? 'rgba(34, 197, 94, 0.5)' : stat.color.includes('blue') ? 'rgba(59, 130, 246, 0.5)' : stat.color.includes('purple') ? 'rgba(168, 85, 247, 0.5)' : 'rgba(249, 115, 22, 0.5)'}`;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = '';
-                    }}
+                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer hover:scale-105"
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}
