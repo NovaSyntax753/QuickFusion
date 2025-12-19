@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import HeroV5 from "@/components/HeroV1";
-import HeroV7 from "@/components/HeroV2";
-import HeroV9 from "@/components/HeroV3";
-import HeroV10 from "@/components/HeroV4";
-import HeroV11 from "@/components/HeroV5";
-import HeroV12 from "@/components/HeroV6";
-import HeroV13 from "@/components/HeroV7";
-import HeroV14 from "@/components/HeroV14";
+import HeroV1 from "@/components/HeroV1";
+import HeroV2 from "@/components/HeroV2";
+import HeroV3 from "@/components/HeroV3";
+import HeroV4 from "@/components/HeroV4";
+import HeroV5 from "@/components/HeroV5";
+import HeroV6 from "@/components/HeroV6";
+import HeroV7 from "@/components/HeroV7";
+import HeroV8 from "@/components/HeroV8";
 import ServiceCard from "@/components/ServiceCard";
 import Counter from "@/components/Counter";
 import Portfolio from "@/components/Portfolio";
@@ -60,7 +60,7 @@ export default function Home() {
       <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-emerald-500">
         HERO VERSION 2
       </div>
-      <HeroV5
+      <HeroV2
         title="Where Creativity Meets Innovation Technology"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -74,7 +74,7 @@ export default function Home() {
       <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-purple-500">
         HERO VERSION 3
       </div>
-      <HeroV7
+      <HeroV3
         title="Where Creativity Meets Innovation Technology"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -88,7 +88,7 @@ export default function Home() {
       <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-fuchsia-500">
         HERO VERSION 4
       </div>
-      <HeroV9
+      <HeroV4
         title="Where Creativity Meets Innovation"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -102,7 +102,7 @@ export default function Home() {
       <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-violet-500">
         HERO VERSION 5
       </div>
-      <HeroV10
+      <HeroV5
         title="Where Creativity Meets Innovation Technology"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -116,7 +116,7 @@ export default function Home() {
       <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-cyan-500">
         HERO VERSION 6
       </div>
-      <HeroV11
+      <HeroV6
         title="Where Creativity Meets Innovation Technology"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -130,7 +130,7 @@ export default function Home() {
       <div className="bg-white text-zinc-900 py-3 text-center font-bold text-lg border-b-4 border-zinc-900">
         HERO VERSION 7
       </div>
-      <HeroV12
+      <HeroV7
         title="Where Creativity Meets Innovation"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
@@ -144,21 +144,7 @@ export default function Home() {
       <div className="bg-black text-cyan-400 py-3 text-center font-bold text-lg border-b-4 border-cyan-500">
         HERO VERSION 8
       </div>
-      <HeroV13
-        title="Where Creativity Meets Innovation"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V14 */}
-      <div className="bg-slate-900 text-blue-400 py-3 text-center font-bold text-lg border-b-4 border-blue-500">
-        HERO VERSION 9
-      </div>
-      <HeroV14
+      <HeroV8
         title="Where Creativity Meets Innovation"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
         ctaText="Get Started"
