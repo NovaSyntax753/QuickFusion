@@ -175,9 +175,9 @@ export default function Home() {
       {/* Services Overview Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-green-50 relative">
         {/* Decorative Blobs */}
-        <div className="absolute top-20 right-10 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute top-10 right-0 md:top-20 md:right-10 w-40 h-40 md:w-64 md:h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
         <div
-          className="absolute bottom-20 left-10 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+          className="absolute bottom-10 left-0 md:bottom-20 md:left-10 w-40 h-40 md:w-64 md:h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
 
@@ -495,9 +495,9 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-green-50 to-emerald-50 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-green-400 rounded-full filter blur-3xl animate-float"></div>
+          <div className="absolute top-10 left-0 md:top-20 md:left-10 w-24 h-24 md:w-40 md:h-40 bg-green-400 rounded-full filter blur-3xl animate-float"></div>
           <div
-            className="absolute bottom-20 right-10 w-40 h-40 bg-emerald-400 rounded-full filter blur-3xl animate-float"
+            className="absolute bottom-10 right-0 md:bottom-20 md:right-10 w-24 h-24 md:w-40 md:h-40 bg-emerald-400 rounded-full filter blur-3xl animate-float"
             style={{ animationDelay: "1s" }}
           ></div>
         </div>
@@ -574,9 +574,9 @@ export default function Home() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900">
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+            <div className="absolute top-5 left-0 md:top-10 md:left-10 w-48 h-48 md:w-72 md:h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
             <div
-              className="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
+              className="absolute bottom-5 right-0 md:bottom-10 md:right-10 w-48 h-48 md:w-72 md:h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
               style={{ animationDelay: "2s" }}
             ></div>
           </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
+import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -510,6 +511,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-green-600 to-green-700 py-16">

@@ -41,9 +41,9 @@ export default function About() {
       {/* Company Story Section */}
       <section className="py-20 md:py-28 bg-white relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-20 right-10 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute top-10 right-0 md:top-20 md:right-10 w-40 h-40 md:w-64 md:h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
         <div
-          className="absolute bottom-20 left-10 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+          className="absolute bottom-10 left-0 md:bottom-20 md:left-10 w-40 h-40 md:w-64 md:h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
 
@@ -520,9 +520,9 @@ export default function About() {
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900">
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+            <div className="absolute top-5 left-0 md:top-10 md:left-10 w-48 h-48 md:w-72 md:h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
             <div
-              className="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
+              className="absolute bottom-5 right-0 md:bottom-10 md:right-10 w-48 h-48 md:w-72 md:h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
               style={{ animationDelay: "2s" }}
             ></div>
           </div>
