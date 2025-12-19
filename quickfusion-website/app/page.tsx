@@ -173,7 +173,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-8 items-center justify-center flex-wrap opacity-60 hover:opacity-100 transition-opacity">
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
+            <div className="px-6 py-3 bg-white rounded-lg shadow-sm hover:shadow-lg hover:shadow-green-200/50 transition-all duration-300 cursor-pointer hover:-translate-y-1">
               <p className="text-2xl font-bold text-gray-800">
                 <Counter end={100} suffix="+" />
               </p>
@@ -233,7 +233,7 @@ export default function Home() {
                 ].map((problem, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-md transition-all"
+                    className="flex items-start gap-3 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-lg hover:shadow-red-200/50 hover:border-red-300 transition-all duration-300 cursor-pointer"
                   >
                     <svg
                       className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
@@ -271,7 +271,7 @@ export default function Home() {
                 ].map((solution, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100 hover:shadow-md transition-all"
+                    className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100 hover:shadow-lg hover:shadow-green-200/50 hover:border-green-300 transition-all duration-300 cursor-pointer"
                   >
                     <svg
                       className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5"
@@ -451,7 +451,7 @@ export default function Home() {
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -477,7 +477,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -503,7 +503,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -529,7 +529,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -588,7 +588,16 @@ export default function Home() {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+                    style={{
+                      transition: 'all 0.3s ease',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = `0 20px 40px -15px ${stat.color.includes('green') ? 'rgba(34, 197, 94, 0.5)' : stat.color.includes('blue') ? 'rgba(59, 130, 246, 0.5)' : stat.color.includes('purple') ? 'rgba(168, 85, 247, 0.5)' : 'rgba(249, 115, 22, 0.5)'}`;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = '';
+                    }}
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}
@@ -672,7 +681,7 @@ export default function Home() {
                 className="relative group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 h-full">
+                <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:shadow-green-200/50 transition-all duration-300 h-full cursor-pointer hover:-translate-y-1">
                   {/* Step Number */}
                   <div className="text-6xl font-bold text-green-100 mb-6 group-hover:text-green-200 transition-colors">
                     {item.step}
