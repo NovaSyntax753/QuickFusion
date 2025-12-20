@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import HeroV1 from "@/components/HeroV1";
-import HeroV2 from "@/components/HeroV2";
-import HeroV3 from "@/components/HeroV3";
-import HeroV4 from "@/components/HeroV4";
-import HeroV5 from "@/components/HeroV5";
-import HeroV6 from "@/components/HeroV6";
-import HeroV7 from "@/components/HeroV7";
-import HeroV8 from "@/components/HeroV8";
+import HeroV8 from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Counter from "@/components/Counter";
 import Portfolio from "@/components/Portfolio";
@@ -42,108 +34,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Version Label - Original Hero */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-green-500">
-        HERO VERSION 1
-      </div>
-      <Hero
-        title="Where Creativity Meets Innovation Technology"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V5 */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-emerald-500">
-        HERO VERSION 2
-      </div>
-      <HeroV2
-        title="Where Creativity Meets Innovation Technology"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V7 */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-purple-500">
-        HERO VERSION 3
-      </div>
-      <HeroV3
-        title="Where Creativity Meets Innovation Technology"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V9 */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-fuchsia-500">
-        HERO VERSION 4
-      </div>
-      <HeroV4
-        title="Where Creativity Meets Innovation"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V10 */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-violet-500">
-        HERO VERSION 5
-      </div>
-      <HeroV5
-        title="Where Creativity Meets Innovation Technology"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V11 */}
-      <div className="bg-gray-900 text-white py-3 text-center font-bold text-lg border-b-4 border-cyan-500">
-        HERO VERSION 6
-      </div>
-      <HeroV6
-        title="Where Creativity Meets Innovation Technology"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V12 */}
-      <div className="bg-white text-zinc-900 py-3 text-center font-bold text-lg border-b-4 border-zinc-900">
-        HERO VERSION 7
-      </div>
-      <HeroV7
-        title="Where Creativity Meets Innovation"
-        subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
-        ctaText="Get Started"
-        ctaLink="/contact"
-        secondaryCtaText="Our Services"
-        secondaryCtaLink="/services"
-        backgroundImage="/images/3-removebg-preview.png"
-      />
-
-      {/* Version Label - Hero V13 */}
-      <div className="bg-black text-cyan-400 py-3 text-center font-bold text-lg border-b-4 border-cyan-500">
-        HERO VERSION 8
-      </div>
+      {/* Hero Section - Floating Cards Parallax with Interactive Depth */}
       <HeroV8
         title="Where Creativity Meets Innovation"
         subtitle="We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Fusing strategic marketing with powerful tech solutions."
@@ -154,16 +45,6 @@ export default function Home() {
         backgroundImage="/images/3-removebg-preview.png"
       />
 
-      {/* Divider - End of Hero Comparisons */}
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-6 text-center">
-        <h3 className="text-2xl font-bold">
-          ↑ Choose Your Favorite Hero Design Above ↑
-        </h3>
-        <p className="mt-2 text-green-100">
-          Below is your actual website content
-        </p>
-      </div>
-
       {/* Marquee Section - Client Trust Badges */}
       <section className="py-12 bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +54,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-8 items-center justify-center flex-wrap opacity-60 hover:opacity-100 transition-opacity">
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm hover:shadow-lg hover:shadow-green-200/50 transition-all duration-300 cursor-pointer hover:-translate-y-1">
+            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
               <p className="text-2xl font-bold text-gray-800">
                 <Counter end={100} suffix="+" />
               </p>
@@ -233,7 +114,7 @@ export default function Home() {
                 ].map((problem, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-lg hover:shadow-red-200/50 hover:border-red-300 transition-all duration-300 cursor-pointer"
+                    className="flex items-start gap-3 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-md transition-all"
                   >
                     <svg
                       className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
@@ -271,7 +152,7 @@ export default function Home() {
                 ].map((solution, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100 hover:shadow-lg hover:shadow-green-200/50 hover:border-green-300 transition-all duration-300 cursor-pointer"
+                    className="flex items-start gap-3 p-4 bg-green-50 rounded-xl border border-green-100 hover:shadow-md transition-all"
                   >
                     <svg
                       className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5"
@@ -451,7 +332,7 @@ export default function Home() {
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -477,7 +358,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -503,7 +384,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -529,7 +410,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-6 h-6 text-green-600"
@@ -588,7 +469,7 @@ export default function Home() {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer hover:scale-105"
+                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}
@@ -672,7 +553,7 @@ export default function Home() {
                 className="relative group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:shadow-green-200/50 transition-all duration-300 h-full cursor-pointer hover:-translate-y-1">
+                <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 h-full">
                   {/* Step Number */}
                   <div className="text-6xl font-bold text-green-100 mb-6 group-hover:text-green-200 transition-colors">
                     {item.step}
