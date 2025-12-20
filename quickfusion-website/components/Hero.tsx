@@ -203,14 +203,14 @@ export default function HeroV14({
 
           {/* Right Content - Floating Card Stack with Parallax */}
           <div
-            className={`lg:col-span-6 relative h-[550px] sm:h-[650px] w-full perspective-[2000px] group ${
+            className={`lg:col-span-6 relative h-[550px] sm:h-[650px] w-full perspective-[2000px] group overflow-visible ${
               isTouched ? "touched" : ""
             }`}
             onTouchStart={handleTouch}
             onClick={handleTouch}
           >
             <div
-              className="relative w-full h-full"
+              className="relative w-full h-full overflow-visible"
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Card 5 - Deepest Layer */}
@@ -328,7 +328,7 @@ export default function HeroV14({
 
               {/* Floating Badges */}
               <div
-                className="absolute -left-8 top-24 bg-gradient-to-br from-slate-800/95 to-green-900/95 p-5 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl transition-all duration-700 group-hover:-translate-x-4 group-hover:-translate-y-4 group-[.touched]:-translate-x-4 group-[.touched]:-translate-y-4 z-20 animate-[bounceIn_1s_ease-out] opacity-0"
+                className="hidden lg:block absolute -left-8 top-24 bg-gradient-to-br from-slate-800/95 to-green-900/95 p-5 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl transition-all duration-700 group-hover:-translate-x-4 group-hover:-translate-y-4 group-[.touched]:-translate-x-4 group-[.touched]:-translate-y-4 z-20 animate-[bounceIn_1s_ease-out] opacity-0"
                 style={{
                   transform: "translateZ(80px)",
                   animationDelay: "1s",
@@ -349,7 +349,7 @@ export default function HeroV14({
               </div>
 
               <div
-                className="absolute -right-6 bottom-28 bg-gradient-to-br from-slate-800/95 to-emerald-900/95 p-5 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl transition-all duration-700 group-hover:translate-x-4 group-hover:translate-y-4 group-[.touched]:translate-x-4 group-[.touched]:translate-y-4 z-20 animate-[bounceIn_1s_ease-out] opacity-0"
+                className="hidden lg:block absolute -right-6 bottom-28 bg-gradient-to-br from-slate-800/95 to-emerald-900/95 p-5 rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl transition-all duration-700 group-hover:translate-x-4 group-hover:translate-y-4 group-[.touched]:translate-x-4 group-[.touched]:translate-y-4 z-20 animate-[bounceIn_1s_ease-out] opacity-0"
                 style={{
                   transform: "translateZ(80px)",
                   animationDelay: "1.2s",
