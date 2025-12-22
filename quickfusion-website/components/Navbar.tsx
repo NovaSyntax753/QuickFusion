@@ -33,10 +33,12 @@ export default function Navbar() {
           >
             <Image
               src="/images/logo-full.png"
-              alt="QuickFusion Innovations Logo"
+              alt="QuickFusion Innovations - Creative Media Agency"
               width={250}
               height={60}
               priority
+              quality={90}
+              sizes="(max-width: 768px) 200px, 250px"
               className="h-14 md:h-16 w-auto group-hover:brightness-110 transition-all"
               style={{ maxWidth: "250px" }}
             />
@@ -63,6 +65,13 @@ export default function Navbar() {
               className="relative px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition-colors group"
             >
               Services
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link
+              href="/portfolio"
+              className="relative px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition-colors group"
+            >
+              Portfolio
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
@@ -141,6 +150,13 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           >
             Services
+          </Link>
+          <Link
+            href="/portfolio"
+            className="block px-4 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg font-medium transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Portfolio
           </Link>
           <Link
             href="/contact"

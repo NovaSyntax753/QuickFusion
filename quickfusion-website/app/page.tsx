@@ -2,13 +2,21 @@ import type { Metadata } from "next";
 import HeroV8 from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Counter from "@/components/Counter";
-import Portfolio from "@/components/Portfolio";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
     "QuickFusion Innovations - Where creativity meets technology. Fusing strategic marketing with powerful tech solutions to help brands lead with confidence in the digital world.",
+  keywords: [
+    "video production Nagpur",
+    "media agency",
+    "video editing services",
+    "content creation",
+    "digital marketing",
+    "social media videos",
+    "corporate video production",
+  ],
   openGraph: {
     title: "QuickFusion Innovations - Where Creativity Meets Technology",
     description:
@@ -28,6 +36,9 @@ export const metadata: Metadata = {
     title: "QuickFusion Innovations - Where Creativity Meets Technology",
     description:
       "We create growth engines that empower businesses to think bigger, move faster, and scale smarter.",
+  },
+  alternates: {
+    canonical: "https://quickfusioninnovations.com",
   },
 };
 
@@ -304,9 +315,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Portfolio Section */}
-      <Portfolio />
 
       {/* Why Choose Us Section with Stats */}
       <section className="py-20 md:py-28 bg-white">
