@@ -32,7 +32,7 @@ export default function Navbar() {
             className="flex items-center hover:scale-105 transition-transform duration-300 group"
           >
             <Image
-              src="/images/logo-full.png"
+              src="/images/3-removebg-preview.png"
               alt="QuickFusion Innovations - Creative Media Agency"
               width={180}
               height={45}
