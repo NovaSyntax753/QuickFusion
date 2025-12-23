@@ -39,7 +39,7 @@ export default function About() {
       />
 
       {/* Company Story Section */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-10 right-0 md:top-20 md:right-10 w-40 h-40 md:w-64 md:h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
         <div
@@ -55,38 +55,38 @@ export default function About() {
                   Our Journey
                 </span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Building the{" "}
                 <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                   Future
                 </span>{" "}
                 Together
               </h2>
-              <p className="text-gray-600 mb-4 leading-relaxed text-lg">
+              <p className="text-gray-600 mb-4 leading-relaxed text-base md:text-lg">
                 QuickFusion Innovations was founded in 2024 by Purab Patel with
                 a clear mission: to bridge the gap between cutting-edge
                 technology and practical business solutions. We believe that
                 innovation happens when creativity meets technology.
               </p>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-600 mb-4 leading-relaxed text-sm md:text-base">
                 In today's digital era, businesses can't rely on just one side
                 of the equation. Technology alone can't create impact. Marketing
                 alone can't build a future. But when both come together, that's
                 where transformation begins.
               </p>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-600 mb-4 leading-relaxed text-sm md:text-base">
                 Today, we are a trusted partner for businesses seeking to
                 modernize their operations, enhance their digital presence, and
                 unlock new opportunities through technology. Our team of skilled
                 developers, designers, and strategists work collaboratively to
                 deliver solutions that exceed expectations.
               </p>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-600 mb-4 leading-relaxed text-sm md:text-base">
                 From startups to established enterprises, we provide the
                 expertise and support needed to navigate the complexities of
                 digital transformation and achieve sustainable growth.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                 Based in Nagpur, Maharashtra, we serve clients across India and
                 beyond, helping brands not just survive, but lead with
                 confidence in the digital world.
@@ -146,7 +146,7 @@ export default function About() {
       </section>
 
       {/* Mission, Vision, Values Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <div className="inline-block mb-4">

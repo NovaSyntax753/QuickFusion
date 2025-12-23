@@ -25,7 +25,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link
             href="/"
@@ -34,13 +34,13 @@ export default function Navbar() {
             <Image
               src="/images/logo-full.png"
               alt="QuickFusion Innovations - Creative Media Agency"
-              width={250}
-              height={60}
+              width={220}
+              height={55}
               priority
-              quality={90}
-              sizes="(max-width: 768px) 200px, 250px"
-              className="h-14 md:h-16 w-auto group-hover:brightness-110 transition-all"
-              style={{ maxWidth: "250px" }}
+              quality={95}
+              sizes="(max-width: 768px) 180px, 220px"
+              className="h-12 md:h-14 w-auto object-contain group-hover:brightness-110 transition-all"
+              style={{ maxWidth: "220px", objectFit: "contain" }}
             />
           </Link>
 

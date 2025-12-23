@@ -40,14 +40,14 @@ export default function Services() {
       />
 
       {/* Main Services Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Video Content Creation & Editing */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-purple-600">
+            <div className="bg-gray-50 p-6 md:p-8 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4 md:mb-6 text-purple-600">
                 <svg
-                  className="w-8 h-8"
+                  className="w-7 h-7 md:w-8 md:h-8"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -60,10 +60,10 @@ export default function Services() {
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
                 Video Content Creation & Editing
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 We transform raw footage into clean, high-impact video content
                 that truly connects with your audience. Perfect for coaches and
                 personal brands building trust, growing influence, and

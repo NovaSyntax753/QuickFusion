@@ -57,42 +57,42 @@ export default function Home() {
       />
 
       {/* Marquee Section - Client Trust Badges */}
-      <section className="py-12 bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 overflow-hidden">
+      <section className="py-8 md:py-12 bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold">
+          <div className="text-center mb-6 md:mb-8">
+            <p className="text-xs md:text-sm uppercase tracking-wider text-gray-500 font-semibold">
               Trusted By Leading Businesses
             </p>
           </div>
-          <div className="flex gap-8 items-center justify-center flex-wrap opacity-60 hover:opacity-100 transition-opacity">
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-2xl font-bold text-gray-800">
+          <div className="flex gap-4 md:gap-8 items-center justify-center flex-wrap opacity-60 hover:opacity-100 transition-opacity">
+            <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
+              <p className="text-xl md:text-2xl font-bold text-gray-800">
                 <Counter end={100} suffix="+" />
               </p>
-              <p className="text-xs text-gray-600">Projects</p>
+              <p className="text-xs md:text-xs text-gray-600">Projects</p>
             </div>
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-2xl font-bold text-gray-800">
+            <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
+              <p className="text-xl md:text-2xl font-bold text-gray-800">
                 <Counter end={50} suffix="+" />
               </p>
-              <p className="text-xs text-gray-600">Clients</p>
+              <p className="text-xs md:text-xs text-gray-600">Clients</p>
             </div>
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-2xl font-bold text-gray-800">
+            <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
+              <p className="text-xl md:text-2xl font-bold text-gray-800">
                 <Counter end={1} suffix="+" />
               </p>
-              <p className="text-xs text-gray-600">Year</p>
+              <p className="text-xs md:text-xs text-gray-600">Year</p>
             </div>
-            <div className="px-6 py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-2xl font-bold text-gray-800">24/7</p>
-              <p className="text-xs text-gray-600">Support</p>
+            <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
+              <p className="text-xl md:text-2xl font-bold text-gray-800">24/7</p>
+              <p className="text-xs md:text-xs text-gray-600">Support</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -317,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section with Stats */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -505,7 +505,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-green-50 to-emerald-50 relative overflow-hidden">
+      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-green-50 to-emerald-50 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30">
           <div className="absolute top-10 left-0 md:top-20 md:left-10 w-24 h-24 md:w-40 md:h-40 bg-green-400 rounded-full filter blur-3xl animate-float"></div>
@@ -533,7 +533,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 step: "01",
@@ -561,16 +561,16 @@ export default function Home() {
                 className="relative group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 h-full">
+                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1">
                   {/* Step Number */}
-                  <div className="text-6xl font-bold text-green-100 mb-6 group-hover:text-green-200 transition-colors">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 bg-gradient-to-r from-gray-800 to-gray-900 text-transparent bg-clip-text group-hover:from-green-600 group-hover:to-emerald-600 transition-all duration-300">
                     {item.step}
                   </div>
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <p className="text-sm md:text-base text-gray-600">{item.desc}</p>
                 </div>
                 {/* Connector Line */}
                 {index < 3 && (
@@ -583,7 +583,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section with Unique Design */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section className="relative py-16 md:py-20 lg:py-28 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900">
           <div className="absolute inset-0 opacity-20">
