@@ -4,7 +4,9 @@ import { useState } from "react";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
 
   const validateEmail = (email: string) => {
@@ -14,7 +16,7 @@ export default function Newsletter() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email.trim()) {
       setStatus("error");
       setMessage("Please enter your email address.");
@@ -36,7 +38,7 @@ export default function Newsletter() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           email,
           _subject: "New Newsletter Subscription - QuickFusion",
         }),

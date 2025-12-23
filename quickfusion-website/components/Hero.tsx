@@ -165,7 +165,7 @@ export default function HeroV14({
               {secondaryCtaText && secondaryCtaLink && (
                 <Link
                   href={secondaryCtaLink}
-                  className="px-8 py-4 md:px-10 md:py-5 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white font-semibold rounded-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30"
+                  className="px-8 py-4 md:px-10 md:py-5 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white font-semibold rounded-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30 text-center"
                 >
                   {secondaryCtaText}
                 </Link>
