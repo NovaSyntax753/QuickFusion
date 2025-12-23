@@ -203,7 +203,7 @@ export default function HeroV14({
 
           {/* Right Content - Floating Card Stack with Parallax */}
           <div
-            className={`lg:col-span-5 relative h-[400px] sm:h-[450px] md:h-[500px] w-full perspective-[2000px] group overflow-visible ${
+            className={`col-span-1 lg:col-span-5 relative h-[500px] sm:h-[550px] md:h-[600px] w-full perspective-[2000px] group overflow-visible ${
               isTouched ? "touched" : ""
             }`}
             onTouchStart={handleTouch}
