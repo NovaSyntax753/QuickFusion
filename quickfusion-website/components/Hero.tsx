@@ -83,7 +83,7 @@ export default function HeroV14({
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white selection:bg-green-500/20">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white selection:bg-green-500/20 pt-16 md:pt-20">
       {/* Animated Background Layers */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -103,10 +103,10 @@ export default function HeroV14({
       {/* Parallax Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(22,163,74,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(22,163,74,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,black_40%,transparent_100%)]" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="lg:col-span-6 flex flex-col items-start space-y-8">
+          <div className="lg:col-span-7 flex flex-col items-start space-y-6">
             {/* Floating Badge */}
             <div className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-500/10 border border-green-500/30 backdrop-blur-2xl shadow-lg shadow-green-500/10 hover:shadow-green-500/20 transition-all duration-300">
               <div className="relative">
@@ -119,11 +119,11 @@ export default function HeroV14({
             </div>
 
             {/* Dynamic Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-tight">
               <span className="block text-white">
                 {title.split(" ").slice(0, 2).join(" ")}
               </span>
-              <span className="block mt-2 md:mt-3 relative">
+              <span className="block mt-2 relative">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-green-500">
                   {title.split(" ").slice(2).join(" ")}
                 </span>
@@ -132,16 +132,16 @@ export default function HeroV14({
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-xl leading-relaxed">
               {subtitle}
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto pt-2">
               {ctaText && ctaLink && (
                 <Link
                   href={ctaLink}
-                  className="group relative px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold rounded-2xl transition-all duration-300 shadow-[0_10px_40px_rgba(22,163,74,0.3)] hover:shadow-[0_20px_50px_rgba(22,163,74,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-green-500/50 overflow-hidden"
+                  className="group relative px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold rounded-xl transition-all duration-300 shadow-[0_10px_40px_rgba(22,163,74,0.3)] hover:shadow-[0_20px_50px_rgba(22,163,74,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-green-500/50 overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {ctaText}
@@ -165,7 +165,7 @@ export default function HeroV14({
               {secondaryCtaText && secondaryCtaLink && (
                 <Link
                   href={secondaryCtaLink}
-                  className="px-8 py-4 md:px-10 md:py-5 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white font-semibold rounded-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30 text-center"
+                  className="px-6 py-3 md:px-8 md:py-4 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30 text-center"
                 >
                   {secondaryCtaText}
                 </Link>
@@ -173,9 +173,9 @@ export default function HeroV14({
             </div>
 
             {/* Stats Row */}
-            <div className="pt-6 grid grid-cols-3 gap-4 md:gap-6 w-full max-w-lg">
+            <div className="pt-4 grid grid-cols-3 gap-3 md:gap-5 w-full max-w-lg">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-1">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-1">
                   <AnimatedCounter end={500} suffix="+" />
                 </div>
                 <div className="text-xs text-slate-400 font-medium uppercase tracking-wider">
@@ -203,7 +203,7 @@ export default function HeroV14({
 
           {/* Right Content - Floating Card Stack with Parallax */}
           <div
-            className={`lg:col-span-6 relative h-[550px] sm:h-[650px] w-full perspective-[2000px] group overflow-visible ${
+            className={`lg:col-span-5 relative h-[400px] sm:h-[450px] md:h-[500px] w-full perspective-[2000px] group overflow-visible ${
               isTouched ? "touched" : ""
             }`}
             onTouchStart={handleTouch}

@@ -109,7 +109,7 @@ export default function Portfolio() {
       : portfolioData.filter((item) => item.category === selectedCategory);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen mt-16 md:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
