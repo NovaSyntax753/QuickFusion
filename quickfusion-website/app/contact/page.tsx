@@ -25,12 +25,16 @@ export default function Contact() {
 
   return (
     <>
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 md:py-32 mt-20">
+      <section className="relative bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white py-20 md:py-32 pb-12 md:pb-16">
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-green-500 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "8s" }}></div>
+          <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-500 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s", animationDelay: "2s" }}></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             Contact Us
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 md:mb-8 max-w-3xl mx-auto">
             Have a project in mind? Let&apos;s discuss how we can help transform
             your business with innovative technology solutions.
           </p>
@@ -38,7 +42,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}

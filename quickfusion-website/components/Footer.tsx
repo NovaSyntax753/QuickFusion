@@ -20,10 +20,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Stay Updated
               </h3>
-              <p className="text-gray-400">
+              <p className="text-sm sm:text-base text-gray-400">
                 Get the latest news and updates from QuickFusion Innovations
               </p>
             </div>
@@ -42,9 +42,9 @@ export default function Footer() {
             <Image
               src="/images/3-removebg-preview.png"
               alt="QuickFusion Innovations Logo"
-              width={85}
-              height={80}
-              className="h-16 w-auto mb-4"
+              width={160}
+              height={150}
+              className="h-32 md:h-40 w-auto mb-4"
             />
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               QuickFusion Innovations delivers cutting-edge software and

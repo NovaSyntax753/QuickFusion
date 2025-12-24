@@ -60,34 +60,34 @@ export default function Home() {
       <section className="py-8 md:py-12 bg-gradient-to-r from-gray-50 to-white border-y border-gray-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 md:mb-8">
-            <p className="text-xs md:text-sm uppercase tracking-wider text-gray-500 font-semibold">
+            <p className="text-sm md:text-base uppercase tracking-wider text-gray-500 font-semibold">
               Trusted By Leading Businesses
             </p>
           </div>
           <div className="flex gap-4 md:gap-8 items-center justify-center flex-wrap opacity-60 hover:opacity-100 transition-opacity">
             <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-xl md:text-2xl font-bold text-gray-800">
+              <p className="text-2xl md:text-3xl font-bold text-gray-800">
                 <Counter end={100} suffix="+" />
               </p>
-              <p className="text-xs md:text-xs text-gray-600">Projects</p>
+              <p className="text-sm md:text-base text-gray-600">Projects</p>
             </div>
             <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-xl md:text-2xl font-bold text-gray-800">
+              <p className="text-2xl md:text-3xl font-bold text-gray-800">
                 <Counter end={50} suffix="+" />
               </p>
-              <p className="text-xs md:text-xs text-gray-600">Clients</p>
+              <p className="text-sm md:text-base text-gray-600">Clients</p>
             </div>
             <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-xl md:text-2xl font-bold text-gray-800">
+              <p className="text-2xl md:text-3xl font-bold text-gray-800">
                 <Counter end={1} suffix="+" />
               </p>
-              <p className="text-xs md:text-xs text-gray-600">Year</p>
+              <p className="text-sm md:text-base text-gray-600">Year</p>
             </div>
             <div className="px-4 py-2 md:px-6 md:py-3 bg-white rounded-lg shadow-sm">
-              <p className="text-xl md:text-2xl font-bold text-gray-800">
+              <p className="text-2xl md:text-3xl font-bold text-gray-800">
                 24/7
               </p>
-              <p className="text-xs md:text-xs text-gray-600">Support</p>
+              <p className="text-sm md:text-base text-gray-600">Support</p>
             </div>
           </div>
         </div>
@@ -450,7 +450,7 @@ export default function Home() {
 
             {/* Right Stats Grid */}
             <div className="animate-fade-in-right">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 {[
                   {
                     number: 100,
@@ -479,14 +479,14 @@ export default function Home() {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    className="relative group bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}
                     ></div>
                     <div className="relative">
                       <div
-                        className={`text-5xl font-bold bg-gradient-to-r ${stat.color} text-transparent bg-clip-text mb-3`}
+                        className={`text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r ${stat.color} text-transparent bg-clip-text mb-2 sm:mb-3`}
                       >
                         {stat.number > 0 ? (
                           <Counter end={stat.number} suffix={stat.suffix} />
@@ -494,7 +494,7 @@ export default function Home() {
                           stat.suffix
                         )}
                       </div>
-                      <div className="text-gray-600 font-medium">
+                      <div className="text-sm sm:text-base text-gray-600 font-medium">
                         {stat.label}
                       </div>
                     </div>
@@ -520,17 +520,17 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-white text-green-600 rounded-full text-sm font-semibold shadow-sm">
+              <span className="px-4 py-2 bg-white text-green-600 rounded-full text-xs sm:text-sm font-semibold shadow-sm">
                 Our Process
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               How We{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                 Work
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               A streamlined approach to turning your ideas into reality
             </p>
           </div>

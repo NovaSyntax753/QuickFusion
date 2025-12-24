@@ -517,16 +517,16 @@ export default function Services() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-green-600 to-green-700 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-green-50 mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-green-50 mb-8">
             Let&apos;s discuss your project and find the perfect solution for
             your business needs
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-green-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-green-600 px-8 py-3 rounded-md text-sm md:text-base font-semibold hover:bg-gray-100 transition-colors"
           >
             Contact Us Today
           </Link>

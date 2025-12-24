@@ -59,7 +59,7 @@ function AnimatedCounter({
   }, [end, hasAnimated]);
 
   return (
-    <div ref={counterRef}>
+    <div ref={counterRef} className="inline-block">
       {count}
       {suffix}
     </div>
@@ -119,11 +119,11 @@ export default function HeroV14({
             </div>
 
             {/* Dynamic Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-tight">
               <span className="block text-white">
                 {title.split(" ").slice(0, 2).join(" ")}
               </span>
-              <span className="block mt-2 relative">
+              <span className="block mt-1.5 md:mt-2 relative">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-green-500">
                   {title.split(" ").slice(2).join(" ")}
                 </span>
@@ -141,7 +141,7 @@ export default function HeroV14({
               {ctaText && ctaLink && (
                 <Link
                   href={ctaLink}
-                  className="group relative px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold rounded-xl transition-all duration-300 shadow-[0_10px_40px_rgba(22,163,74,0.3)] hover:shadow-[0_20px_50px_rgba(22,163,74,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-green-500/50 overflow-hidden"
+                  className="group relative px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-sm md:text-base font-bold rounded-xl transition-all duration-300 shadow-[0_10px_40px_rgba(22,163,74,0.3)] hover:shadow-[0_20px_50px_rgba(22,163,74,0.4)] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-green-500/50 overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {ctaText}
@@ -165,7 +165,7 @@ export default function HeroV14({
               {secondaryCtaText && secondaryCtaLink && (
                 <Link
                   href={secondaryCtaLink}
-                  className="px-6 py-3 md:px-8 md:py-4 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30 text-center"
+                  className="px-6 py-3 md:px-8 md:py-4 bg-slate-800/50 border-2 border-slate-600/50 hover:border-slate-400/70 text-slate-200 hover:text-white text-sm md:text-base font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-500/30 text-center"
                 >
                   {secondaryCtaText}
                 </Link>
@@ -175,7 +175,7 @@ export default function HeroV14({
             {/* Stats Row */}
             <div className="pt-4 grid grid-cols-3 gap-3 md:gap-5 w-full max-w-lg">
               <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-1">
+                <div className="text-3xl sm:text-4xl font-black text-white mb-1">
                   <AnimatedCounter end={500} suffix="+" />
                 </div>
                 <div className="text-xs text-slate-400 font-medium uppercase tracking-wider">

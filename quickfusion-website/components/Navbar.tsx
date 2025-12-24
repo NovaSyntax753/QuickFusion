@@ -34,13 +34,13 @@ export default function Navbar() {
             <Image
               src="/images/3-removebg-preview.jpg"
               alt="QuickFusion Innovations - Creative Media Agency"
-              width={90}
-              height={90}
+              width={120}
+              height={120}
               priority
               quality={100}
-              sizes="(max-width: 768px) 90px, 90px"
-              className="h-20 md:h-24 w-auto object-contain group-hover:brightness-110 transition-all"
-              style={{ maxWidth: "90px", objectFit: "contain" }}
+              sizes="(max-width: 768px) 120px, 120px"
+              className="h-24 md:h-32 w-auto object-contain group-hover:brightness-110 transition-all"
+              style={{ maxWidth: "120px", objectFit: "contain" }}
             />
           </Link>
 

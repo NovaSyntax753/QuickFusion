@@ -55,7 +55,7 @@ export default function About() {
                   Our Journey
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Building the{" "}
                 <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                   Future
@@ -96,7 +96,7 @@ export default function About() {
             <div className="animate-fade-in-right">
               <div className="relative">
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   {[
                     {
                       number: "100+",
@@ -121,18 +121,18 @@ export default function About() {
                   ].map((stat, index) => (
                     <div
                       key={index}
-                      className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                      className="group relative bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                     >
                       <div
                         className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}
                       ></div>
                       <div className="relative">
                         <div
-                          className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${stat.color} text-transparent bg-clip-text mb-3`}
+                          className={`text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r ${stat.color} text-transparent bg-clip-text mb-2 sm:mb-3`}
                         >
                           {stat.number}
                         </div>
-                        <div className="text-gray-600 font-medium">
+                        <div className="text-sm sm:text-base text-gray-600 font-medium">
                           {stat.label}
                         </div>
                       </div>
@@ -150,11 +150,11 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold">
+              <span className="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm font-semibold">
                 What Drives Us
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our Core{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                 Principles
@@ -287,13 +287,13 @@ export default function About() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Why{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                 Choose Us
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               We bring a unique combination of skills, experience, and
               dedication to every project
             </p>
@@ -457,13 +457,13 @@ export default function About() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Meet Our{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">
                 Leadership
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               The visionary leaders driving QuickFusion Innovations forward
             </p>
           </div>
