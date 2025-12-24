@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "We create growth engines that empower businesses to think bigger, move faster, and scale smarter. Web development, app development, AI solutions, and digital transformation.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "D:\\Project\\QuickFusion\\3-removebg-preview.jpg",
         width: 1200,
         height: 630,
         alt: "QuickFusion Innovations - Software & Technology Solutions",
