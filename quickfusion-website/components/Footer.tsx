@@ -40,11 +40,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Image
-              src="/images/logo-white.png"
+              src="/images/3-removebg-preview.png"
               alt="QuickFusion Innovations Logo"
               width={85}
               height={80}
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               QuickFusion Innovations delivers cutting-edge software and
