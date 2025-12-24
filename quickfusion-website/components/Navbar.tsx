@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-lg"
-          : "bg-white/80 backdrop-blur-sm shadow-md"
+          ? "bg-white backdrop-blur-md shadow-lg"
+          : "bg-white backdrop-blur-sm shadow-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,13 +34,13 @@ export default function Navbar() {
             <Image
               src="/images/3-removebg-preview.png"
               alt="QuickFusion Innovations - Creative Media Agency"
-              width={85}
-              height={80}
+              width={90}
+              height={90}
               priority
               quality={100}
-              sizes="(max-width: 768px) 85px, 85px"
-              className="h-16 md:h-20 w-auto object-contain group-hover:brightness-110 transition-all"
-              style={{ maxWidth: "85px", objectFit: "contain" }}
+              sizes="(max-width: 768px) 90px, 90px"
+              className="h-20 md:h-24 w-auto object-contain group-hover:brightness-110 transition-all"
+              style={{ maxWidth: "90px", objectFit: "contain" }}
             />
           </Link>
 
