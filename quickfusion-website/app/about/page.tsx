@@ -39,7 +39,7 @@ export default function About() {
       />
 
       {/* Company Story Section */}
-      <section className="py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden mt-16 md:mt-20">
+      <section className="py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-10 right-0 md:top-20 md:right-10 w-40 h-40 md:w-64 md:h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
         <div
