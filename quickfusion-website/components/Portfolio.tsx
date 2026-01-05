@@ -26,7 +26,7 @@ const portfolioData: VideoItem[] = [
     title: "Instagram Reel - Fashion Campaign",
     category: "Short Form",
     client: "Fashion Brand",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/L_jWHffIx5E",
     views: "25K+",
   },
   {
@@ -101,7 +101,6 @@ const categories = [
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
 
   const filteredProjects =
     selectedCategory === "All"
@@ -172,25 +171,24 @@ export default function Portfolio() {
           {filteredProjects.map((video) => (
             <div
               key={video.id}
-              onClick={() => setSelectedVideo(video)}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Video Thumbnail/Embed Preview */}
-              <div className="relative h-64 bg-gradient-to-br from-[#49af2f]/20 to-[#3d8f26]/20 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all">
-                  <div className="w-16 h-16 bg-[#49af2f] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                    <svg
-                      className="w-8 h-8 text-white ml-1"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
+              {/* Video Player */}
+              <div
+                className="relative w-full bg-black overflow-hidden"
+                style={{ paddingTop: "177.78%" /* 9:16 aspect ratio */ }}
+              >
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={video.videoUrl}
+                  title={video.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
                 {/* View count badge */}
                 {video.views && (
-                  <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 z-10">
                     <svg
                       className="w-4 h-4"
                       fill="currentColor"
@@ -246,70 +244,6 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
-
-      {/* Video Modal */}
-      {selectedVideo && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 overflow-y-auto"
-          onClick={() => setSelectedVideo(null)}
-        >
-          <div
-            className="relative w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-2xl my-8"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedVideo(null)}
-              className="absolute top-3 right-3 z-20 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-xl border-2 border-gray-300"
-            >
-              <svg
-                className="w-6 h-6 text-gray-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            {/* Video Player */}
-            <div
-              className="relative w-full bg-black"
-              style={{ paddingTop: "56.25%" }}
-            >
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={selectedVideo.videoUrl}
-                title={selectedVideo.title}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-
-            {/* Video Info */}
-            <div className="p-6 bg-white">
-              <div className="mb-3">
-                <span className="inline-block px-3 py-1 bg-[#49af2f]/10 text-[#49af2f] text-xs font-semibold rounded-full">
-                  {selectedVideo.category}
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {selectedVideo.title}
-              </h3>
-              <p className="text-gray-600">
-                Client:{" "}
-                <span className="font-semibold">{selectedVideo.client}</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

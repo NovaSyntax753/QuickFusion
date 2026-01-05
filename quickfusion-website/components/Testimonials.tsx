@@ -67,8 +67,11 @@ const Testimonials = () => {
         </div>
         
         <div className="mt-12 text-center">
-            <a href="https://www.justdial.com/Nagpur/QuickFusion-Innovations-Kachi-Visa-Oswal-Ground-Chapru-Nagar/0712PX712-X712-240814121154-W3C5_BZDET" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
+            <a href="https://www.justdial.com/Nagpur/QuickFusion-Innovations-Kachi-Visa-Oswal-Ground-Chapru-Nagar/0712PX712-X712-240814121154-W3C5_BZDET" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-white bg-[#49af2f] hover:bg-[#3d8f26] hover:shadow-xl hover:scale-105 transition-all duration-300">
                 View All Reviews on JustDial
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
             </a>
         </div>
       </div>
