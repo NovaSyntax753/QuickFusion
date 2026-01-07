@@ -16,19 +16,48 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", company: "", message: "" });
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // Add Web3Forms access key
+    formData.append("access_key", "0d6ca3c8-d45f-4969-8616-c233f7679f61");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", company: "", message: "" });
+      } else {
+        console.error("Form submission failed:", data);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <section className="relative bg-gradient-to-br from-slate-900 via-green-950 to-slate-900 text-white py-20 md:py-32 pb-12 md:pb-16">
         <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-green-500 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "8s" }}></div>
-          <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-500 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s", animationDelay: "2s" }}></div>
+          <div
+            className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-green-500 rounded-full blur-[160px] animate-pulse"
+            style={{ animationDuration: "8s" }}
+          ></div>
+          <div
+            className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-500 rounded-full blur-[140px] animate-pulse"
+            style={{ animationDuration: "10s", animationDelay: "2s" }}
+          ></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
@@ -80,7 +109,10 @@ export default function Contact() {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Full Name <span className="text-red-500" aria-hidden="true">*</span>
+                      Full Name{" "}
+                      <span className="text-red-500" aria-hidden="true">
+                        *
+                      </span>
                       <span className="sr-only">(required)</span>
                     </label>
                     <input
@@ -93,7 +125,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Your name"
                       aria-required="true"
                     />
@@ -103,7 +135,10 @@ export default function Contact() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email Address <span className="text-red-500" aria-hidden="true">*</span>
+                      Email Address{" "}
+                      <span className="text-red-500" aria-hidden="true">
+                        *
+                      </span>
                       <span className="sr-only">(required)</span>
                     </label>
                     <input
@@ -116,7 +151,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="your@email.com"
                       aria-required="true"
                     />
@@ -137,7 +172,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Your company"
                     />
                   </div>
@@ -146,7 +181,10 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Message <span className="text-red-500" aria-hidden="true">*</span>
+                      Message{" "}
+                      <span className="text-red-500" aria-hidden="true">
+                        *
+                      </span>
                       <span className="sr-only">(required)</span>
                     </label>
                     <textarea
@@ -158,7 +196,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-600 focus:border-transparent outline-none transition-colors resize-none text-black"
                       placeholder="Tell us about your project..."
                       aria-required="true"
                     />
