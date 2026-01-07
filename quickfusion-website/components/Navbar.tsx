@@ -32,15 +32,15 @@ export default function Navbar() {
             className="flex items-center hover:scale-105 transition-transform duration-300 group"
           >
             <Image
-              src="/images/3-removebg-preview.jpg"
+              src="/images/3-removebg-preview.png"
               alt="QuickFusion Innovations - Creative Media Agency"
               width={120}
               height={120}
               priority
               quality={100}
               sizes="(max-width: 768px) 120px, 120px"
-              className="h-24 md:h-32 w-auto object-contain group-hover:brightness-110 transition-all"
-              style={{ maxWidth: "120px", objectFit: "contain" }}
+              className="h-32 md:h-32 w-auto object-contain group-hover:brightness-110 transition-all"
+              style={{ maxWidth: "170px", objectFit: "contain" }}
             />
           </Link>
 

@@ -40,11 +40,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Image
-              src="/images/3-removebg-preview.png"
+              src="/images/5-removebg-preview.png"
               alt="QuickFusion Innovations Logo"
               width={160}
               height={150}
-              className="h-32 md:h-40 w-auto mb-4"
+              className="h-7 md:h-10 w-auto mb-4"
             />
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               QuickFusion Innovations delivers cutting-edge software and
@@ -203,7 +203,12 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-gray-400">Available 24/7</span>
+                <a
+                  href="tel:07057347707"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  070573 47707
+                </a>
               </li>
             </ul>
           </div>

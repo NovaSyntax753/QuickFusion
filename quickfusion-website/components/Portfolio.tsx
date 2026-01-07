@@ -18,7 +18,7 @@ const portfolioData: VideoItem[] = [
     title: "Brand Story - Product Launch",
     category: "Video Production",
     client: "Tech Startup",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/OdKEpHXJG7k",
     views: "10K+",
   },
   {
@@ -26,7 +26,7 @@ const portfolioData: VideoItem[] = [
     title: "Instagram Reel - Fashion Campaign",
     category: "Short Form",
     client: "Fashion Brand",
-    videoUrl: "https://www.youtube.com/embed/L_jWHffIx5E",
+    videoUrl: "https://www.youtube.com/embed/RAf1RInnw4w",
     views: "25K+",
   },
   {
@@ -34,7 +34,7 @@ const portfolioData: VideoItem[] = [
     title: "Corporate Video - Company Profile",
     category: "Corporate",
     client: "Finance Corp",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/zLjrNPtGKak",
     views: "15K+",
   },
   {
@@ -42,7 +42,7 @@ const portfolioData: VideoItem[] = [
     title: "Social Media Ad - Product Demo",
     category: "Advertisement",
     client: "E-Commerce",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/XaL4uijU3q4",
     views: "50K+",
   },
   {
@@ -50,7 +50,7 @@ const portfolioData: VideoItem[] = [
     title: "Event Highlights - Conference 2024",
     category: "Event Coverage",
     client: "Event Agency",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/n8PcH5Dmuc",
     views: "8K+",
   },
   {
@@ -58,7 +58,7 @@ const portfolioData: VideoItem[] = [
     title: "YouTube Short - Viral Content",
     category: "Short Form",
     client: "Influencer",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/Z6eYzn5ADg4",
     views: "100K+",
   },
   {
@@ -66,7 +66,7 @@ const portfolioData: VideoItem[] = [
     title: "Testimonial Video Series",
     category: "Testimonials",
     client: "Healthcare",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/Lp_ab3gPVHA",
     views: "12K+",
   },
   {
@@ -74,7 +74,7 @@ const portfolioData: VideoItem[] = [
     title: "Motion Graphics - Explainer",
     category: "Motion Graphics",
     client: "SaaS Company",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/JUEdUm_pTuo",
     views: "30K+",
   },
   {
@@ -82,8 +82,80 @@ const portfolioData: VideoItem[] = [
     title: "Music Video Production",
     category: "Music Video",
     client: "Independent Artist",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/8jzZI49KfKo",
     views: "75K+",
+  },
+  {
+    id: 10,
+    title: "Short Form Content",
+    category: "Short Form",
+    client: "Content Creator",
+    videoUrl: "https://www.youtube.com/embed/620DeC8dF6Y",
+    views: "20K+",
+  },
+  {
+    id: 11,
+    title: "Viral Short Video",
+    category: "Short Form",
+    client: "Brand Campaign",
+    videoUrl: "https://www.youtube.com/embed/SlAssgqFt0I",
+    views: "35K+",
+  },
+  {
+    id: 12,
+    title: "Creative Short",
+    category: "Short Form",
+    client: "Digital Agency",
+    videoUrl: "https://www.youtube.com/embed/p1Z1rYoVpHw",
+    views: "18K+",
+  },
+  {
+    id: 13,
+    title: "Trending Video",
+    category: "Short Form",
+    client: "Social Media",
+    videoUrl: "https://www.youtube.com/embed/EM0gyjCOAYA",
+    views: "42K+",
+  },
+  {
+    id: 14,
+    title: "Engaging Content",
+    category: "Short Form",
+    client: "Influencer",
+    videoUrl: "https://www.youtube.com/embed/sVvQADqULQU",
+    views: "28K+",
+  },
+  {
+    id: 15,
+    title: "Dynamic Short",
+    category: "Short Form",
+    client: "Media House",
+    videoUrl: "https://www.youtube.com/embed/cVwFKoMD2ss",
+    views: "31K+",
+  },
+  {
+    id: 16,
+    title: "Promotional Video",
+    category: "Advertisement",
+    client: "Retail Brand",
+    videoUrl: "https://www.youtube.com/embed/ynZ_692ITvQ",
+    views: "22K+",
+  },
+  {
+    id: 17,
+    title: "Brand Story",
+    category: "Corporate",
+    client: "Tech Company",
+    videoUrl: "https://www.youtube.com/embed/uaNZQaLHZBM",
+    views: "26K+",
+  },
+  {
+    id: 18,
+    title: "Creative Campaign",
+    category: "Advertisement",
+    client: "Fashion Label",
+    videoUrl: "https://www.youtube.com/embed/rHEVdTQDRwk",
+    views: "38K+",
   },
 ];
 
@@ -101,11 +173,19 @@ const categories = [
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(9);
 
   const filteredProjects =
     selectedCategory === "All"
       ? portfolioData
       : portfolioData.filter((item) => item.category === selectedCategory);
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
+
+  const loadMore = () => {
+    setVisibleCount((prev) => prev + 9);
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen mt-16 md:mt-20">
@@ -149,26 +229,9 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? "bg-[#49af2f] text-white shadow-lg scale-105"
-                  : "bg-white text-gray-700 border border-gray-200 hover:border-[#49af2f] hover:text-[#49af2f]"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
         {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((video) => (
+          {visibleProjects.map((video) => (
             <div
               key={video.id}
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
@@ -186,63 +249,35 @@ export default function Portfolio() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-                {/* View count badge */}
-                {video.views && (
-                  <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 z-10">
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path
-                        fillRule="evenodd"
-                        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {video.views}
-                  </div>
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-[#49af2f]/10 text-[#49af2f] text-xs font-semibold rounded-full">
-                    {video.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#49af2f] transition-colors">
-                  {video.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Client: <span className="font-semibold">{video.client}</span>
-                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-16">
-          <button className="inline-flex items-center gap-2 px-8 py-4 bg-[#49af2f] text-white font-semibold rounded-xl hover:bg-[#3d8f26] hover:shadow-xl hover:scale-105 transition-all duration-300">
-            View All Videos
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        {hasMore && (
+          <div className="text-center mt-16">
+            <button
+              onClick={loadMore}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#49af2f] text-white font-semibold rounded-xl hover:bg-[#3d8f26] hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button>
-        </div>
+              View All Videos
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
