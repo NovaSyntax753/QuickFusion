@@ -33,18 +33,20 @@ export default function Newsletter() {
     setMessage("");
 
     try {
-      const response = await fetch("https://formspree.io/f/xwpkqjvr", {
+      const formData = new FormData();
+      formData.append("access_key", "ffb89832-2091-45a1-96b6-b29b49db240f");
+      formData.append("email", email);
+      formData.append("subject", "New Newsletter Subscription - QuickFusion");
+      formData.append("from_name", "QuickFusion Website");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          _subject: "New Newsletter Subscription - QuickFusion",
-        }),
+        body: formData,
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         setStatus("success");
         setMessage("Thank you for subscribing! We'll keep you updated.");
         setEmail("");
