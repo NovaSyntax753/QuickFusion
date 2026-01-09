@@ -15,20 +15,27 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
       alert("Please fill in all required fields.");
       return;
     }
-    
+
     setIsSubmitting(true);
 
     const form = e.target as HTMLFormElement;
     const formDataToSubmit = new FormData(form);
 
     // Add Web3Forms access key
-    formDataToSubmit.append("access_key", "0d6ca3c8-d45f-4969-8616-c233f7679f61");
+    formDataToSubmit.append(
+      "access_key",
+      "ffb89832-2091-45a1-96b6-b29b49db240f"
+    );
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
